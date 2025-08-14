@@ -1,0 +1,41 @@
+.dnd * {
+    color: #2d1b00 !important;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.dnd .app > * {
+    background-color: #f8f4e6 !important;
+}
+
+.dnd #nav {
+    background-color: #5e3b1e;
+    color: #f8f4e6;
+}
+
+.dnd #chat-input {
+    background: #fff8dc;
+    border: 2px solid #5e3b1e;
+    margin: 0.3rem;
+    padding: 0.5rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.dnd .message {
+    background: #fff8dc;
+    border: 1px solid #c4b89b;
+    border-radius: 0.5rem;
+    color: #2d1b00 !important;
+}
+
+.dnd .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
+    background: #f8f4e6 !important;
+    padding-top: 0.6rem;
+}
+
+.dnd .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
+    background-color: #e6d5b8;
+}
+
+.dnd .hover\:bg-gray-900:hover {
+    background-color: #e6d5b8 !important;
+}

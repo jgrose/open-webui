@@ -14,7 +14,7 @@
 	export let getModels: Function;
 
 	// General
-	let themes = ['dark', 'light', 'oled-dark'];
+        let themes = ['dark', 'light', 'oled-dark', 'her', 'dnd'];
 	let selectedTheme = 'system';
 
 	let languages: Awaited<ReturnType<typeof getLanguages>> = [];
@@ -155,16 +155,18 @@
 				metaThemeColor.setAttribute('content', systemTheme === 'light' ? '#ffffff' : '#171717');
 			} else {
 				console.log('Setting meta theme color: ' + _theme);
-				metaThemeColor.setAttribute(
-					'content',
-					_theme === 'dark'
-						? '#171717'
-						: _theme === 'oled-dark'
-							? '#000000'
-							: _theme === 'her'
-								? '#983724'
-								: '#ffffff'
-				);
+                                metaThemeColor.setAttribute(
+                                        'content',
+                                        _theme === 'dark'
+                                                ? '#171717'
+                                                : _theme === 'oled-dark'
+                                                        ? '#000000'
+                                                        : _theme === 'her'
+                                                                ? '#983724'
+                                                                : _theme.includes('dnd')
+                                                                        ? '#f8f4e6'
+                                                                        : '#ffffff'
+                                );
 			}
 		}
 
@@ -207,13 +209,14 @@
 						on:change={() => themeChangeHandler(selectedTheme)}
 					>
 						<option value="system">⚙️ {$i18n.t('System')}</option>
-						<option value="dark">🌑 {$i18n.t('Dark')}</option>
-						<option value="oled-dark">🌃 {$i18n.t('OLED Dark')}</option>
-						<option value="light">☀️ {$i18n.t('Light')}</option>
-						<option value="her">🌷 Her</option>
-						<!-- <option value="rose-pine dark">🪻 {$i18n.t('Rosé Pine')}</option>
-						<option value="rose-pine-dawn light">🌷 {$i18n.t('Rosé Pine Dawn')}</option> -->
-					</select>
+                                                <option value="dark">🌑 {$i18n.t('Dark')}</option>
+                                                <option value="oled-dark">🌃 {$i18n.t('OLED Dark')}</option>
+                                                <option value="light">☀️ {$i18n.t('Light')}</option>
+                                                <option value="her">🌷 Her</option>
+                                                <option value="dnd light">🐉 D&D Adventure</option>
+                                                <!-- <option value="rose-pine dark">🪻 {$i18n.t('Rosé Pine')}</option>
+                                                <option value="rose-pine-dawn light">🌷 {$i18n.t('Rosé Pine Dawn')}</option> -->
+                                        </select>
 				</div>
 			</div>
 
